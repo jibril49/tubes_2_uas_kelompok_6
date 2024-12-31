@@ -14,7 +14,7 @@ class VoteController extends GetxController {
   RxList<VoteResponsesModel> vote = <VoteResponsesModel>[].obs;
   RxList<VoteResponsesModel> searchResult = <VoteResponsesModel>[].obs;
   RxBool isLoading = false.obs;
-
+   
   @override
   void onInit() {
     super.onInit();
