@@ -6,7 +6,7 @@ import 'package:tubes_2_uas_kelompok_6/features/vote/controller/vote_controller.
 
 class VoteScreen extends StatelessWidget {
   const VoteScreen({super.key});
-        
+           
   @override
   Widget build(BuildContext context) {
     final VoteController controller = Get.put(VoteController());
