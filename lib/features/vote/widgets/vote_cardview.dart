@@ -21,7 +21,7 @@ class VoteCardview extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            Text(    
               "Id Vote : ${vote.id}",
               style: TextStyle(
                 color: Colors.red,
