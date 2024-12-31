@@ -7,7 +7,7 @@ class VoteCardview extends StatelessWidget {
   final VoidCallback onDelete; 
 
   const VoteCardview({super.key, required this.vote, required this.onDelete});
-
+   
   @override
   Widget build(BuildContext context) {
     return Card(
