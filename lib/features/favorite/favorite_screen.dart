@@ -1,14 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tubes_2_uas_kelompok_6/core/global_component/searchview.dart';
 import 'package:tubes_2_uas_kelompok_6/features/favorite/widgets/favorite_cardview.dart';
+
+import 'controller/favorite_controller.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // final FavoriteController controller = Get.put(FavoriteController());
+    final FavoriteController controller = Get.put(FavoriteController());
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -18,8 +21,8 @@ class FavoriteScreen extends StatelessWidget {
               _buildHeader(),
               SearchViewWidget(
                 hintText: 'Search Favorite',
-                onChanged: (value) {
-                  //controller.searchFavorite;
+                onSearch: (value) {
+                  controller.searchFavorite;
                 },
               ),
               Expanded(
@@ -38,8 +41,8 @@ class FavoriteScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //await controller.fetchFavorite();
+        onPressed: () async {
+          await controller.fetchFavorite();
         },
         child: const Icon(Icons.refresh),
       ),
@@ -120,7 +123,7 @@ class FavoriteScreen extends StatelessWidget {
           return FavoriteCard(
             favorite: favorite,
             onDeleted: () {
-              //controller.deleteFavorite(favorite.id);
+              controller.deleteFavorite(favorite.id);
             },
           );
         },
