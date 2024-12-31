@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:dio/dio.dart';
 import 'package:tubes_2_uas_kelompok_6/core/utils/print_log.dart'; 
 
-
+     
 class VoteResponsesModel {
   final int id;
   final String name;
