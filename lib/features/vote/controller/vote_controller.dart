@@ -19,7 +19,7 @@ class VoteController extends GetxController {
   void onInit() {
     super.onInit();
     fetchVote();
-  }
+  }   
 
   // Fungsi untuk mengambil data vote
   Future<void> fetchVote() async {
