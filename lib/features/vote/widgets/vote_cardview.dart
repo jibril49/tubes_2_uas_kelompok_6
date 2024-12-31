@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';  
-import '../../../data/vote/responsesmodel/vote_responses_model.dart';
 import 'package:tubes_2_uas_kelompok_6/features/vote/controller/vote_controller.dart';
 
 class VoteCardview extends StatelessWidget {
