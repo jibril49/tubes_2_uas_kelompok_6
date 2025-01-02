@@ -1,26 +1,26 @@
 // To parse this JSON data, do
 //
-//     final welcome = welcomeFromJson(jsonString);
+//     final favoritesResponsesModelDelete = favoritesResponsesModelDeleteFromJson(jsonString);
 
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Welcome welcomeFromJson(String str) => Welcome.fromJson(json.decode(str));
+FavoritesResponsesModelDelete favoritesResponsesModelDeleteFromJson(String str) => FavoritesResponsesModelDelete.fromJson(json.decode(str));
 
-String welcomeToJson(Welcome data) => json.encode(data.toJson());
+String favoritesResponsesModelDeleteToJson(FavoritesResponsesModelDelete data) => json.encode(data.toJson());
 
-class Welcome {
-  final String message;
+class FavoritesResponsesModelDelete {
+    final String message;
 
-  Welcome({
-    required this.message,
-  });
+    FavoritesResponsesModelDelete({
+        required this.message,
+    });
 
-  factory Welcome.fromJson(Map<String, dynamic> json) => Welcome(
+    factory FavoritesResponsesModelDelete.fromJson(Map<String, dynamic> json) => FavoritesResponsesModelDelete(
         message: json["message"],
-      );
+    );
 
-  Map<String, dynamic> toJson() => {
+    Map<String, dynamic> toJson() => {
         "message": message,
-      };
+    };
 }
